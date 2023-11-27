@@ -1,0 +1,119 @@
+html {
+    overflow: hidden;
+}
+
+html,
+body {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.main {
+    flex: 1 0 auto;
+    height: 100%;
+    background-color: #010101;
+}
+
+.btn-active {
+    border: #A68E4C 1px solid;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 10px 10px 10px;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+}
+
+.top-img {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: -10px;
+}
+
+.progress-bar__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-bar-cont {
+    width: 65%;
+    height: 16px;
+    background: rgba(185, 239, 176, 0.20);
+    border-radius: 10px;
+}
+
+.progress-bar-text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 16px;
+    background-color: #17C12D;
+    transition: width 1s linear;
+}
+
+.load {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.buttons__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons__inner {
+    width: 45%;
+}
+
+.btn-img {
+    width: 100%;
+    aspect-ratio: 1.7 / 1;
+}
+
+.fake-btn {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    aspect-ratio: 3 / 1;
+    background: rgba(185, 239, 176, 0.20);
+    border-radius: 10px;
+    transition: border 1s ease;
+}
+
+.button__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    border-radius: 80px;
+    pointer-events: none;
+    background: rgba(185, 239, 176, 0.20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 74%;
+    aspect-ratio: 4 / 1;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.button.active {
+    pointer-events: all;
+    background: linear-gradient(180deg, #FFC500 0%, #FA7D09 92.19%);
+}
