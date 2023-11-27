@@ -24,11 +24,16 @@ progressContainers.forEach((containerEl, index) => {
     const onChanged = (value) => {
         progresessList[index] = value
         const allDone = progresessList.every(flag => flag)
-        // console.log('loadbar changed allDone', allDone, progresessList)
-        if (allDone) {
-            // console.log('all done change btns text')
+        const twoBarsDone = progresessList[0] && progresessList[1]
+
+        if (twoBarsDone) {
             document.getElementById('btn1').innerHTML = 'Book of Ra'
             document.getElementById('btn2').innerHTML = 'Sweet Bonanza'
+
+            document.querySelectorAll('.btn-img').forEach(element => element.classList.add('visible'))
+        }
+
+        if (allDone) {
             document.querySelector('.button').classList.add('active');
         }
     }

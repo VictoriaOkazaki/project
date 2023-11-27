@@ -22,7 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 10px 10px 10px;
+    padding: 0 10px 30px 10px;
     font-family: 'Roboto', sans-serif;
     height: 100%;
 }
@@ -78,6 +78,11 @@ body {
 .btn-img {
     width: 100%;
     aspect-ratio: 1.7 / 1;
+    visibility: hidden;
+}
+
+.btn-img.visible {
+    visibility: visible;
 }
 
 .fake-btn {
