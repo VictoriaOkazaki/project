@@ -56,8 +56,13 @@ progressContainers.forEach((containerEl, index) => {
     const onChanged = (value) => {
         progresessList[index] = value
         const allDone = progresessList.every(flag => flag)
-        const twoBarsDone = progresessList[0] && progresessList[1]
 
+        if (allDone) {
+            document.querySelector('.button').classList.add('active');
+            return;
+        }
+
+        const twoBarsDone = progresessList[0] && progresessList[1]
         if (twoBarsDone) {
             const [btn1, btn2] = getTwoRandomImgs()
             document.getElementById('btn1').innerHTML = btn1.text
@@ -68,9 +73,7 @@ progressContainers.forEach((containerEl, index) => {
             document.querySelectorAll('.btn-img').forEach(element => element.classList.add('visible'))
         }
 
-        if (allDone) {
-            document.querySelector('.button').classList.add('active');
-        }
+
     }
     initLoadbar(barElem, checkboxElem, textElem, onChanged, true)
 })
